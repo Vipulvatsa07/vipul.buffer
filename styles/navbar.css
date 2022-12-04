@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#navbar{
+    /* border: 2px solid black; */
+    max-width: 1248px;
+    margin: auto;
+    padding: 35px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 0px 10px 10px;
+
+}
+#navbar > #nav-left{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 13%;
+}
+#navbar > #nav-left > a > img{
+    width: 120px;
+    height: 100%;
+    fill: none;
+}
+#navbar > #nav-left > a + img{
+    width: 35%;
+    height: 100%;
+    fill: none;
+}
+
+/* Navbar-Mid */
+
+#navbar > #nav-mid{
+    display: flex;
+    align-items: center;
+}
+#navbar > #nav-mid > ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#navbar > #nav-mid > ul >li{
+    margin: 0 24px;
+}
+#navbar > #nav-mid > ul > li > a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+#navbar > #nav-mid > ul > li > a:hover{
+    color:  rgb(44, 75, 255);
+}
+
+/* Navbar-Right */
+
+#navbar > #nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+#navbar > #nav-right > a:nth-child(1){
+    text-decoration: none;
+    color: rgb(44, 75, 255);
+}
+#navbar > #nav-right > #ham{
+    display: none;
+}
+
+/* Get Started Buttons Utility Code */
+
+.get-started-btn{
+    background-color: rgb(44, 75, 255);
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    line-height: 1;
+    cursor: pointer;
+}
+.get-started-btn:hover{
+    background-color: rgb(24, 46, 172);
+}
+.learn-more-btn{
+    border: 1px solid rgb(44, 75, 255);
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(44, 75, 255);
+    cursor: pointer;
+}
+.learn-more-btn:hover{
+    background-color: #d7dcfb;;
+}
+
+#ham-menu{
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 10000;
+    height: auto;
+}
+#ham-menu > #layer1{
+    display: none;
+}
+#ham-menu > #layer2{
+    display: none;
+}
+   
+/* ------------->------------->------------>-------------->------------> */
+/* MEDIA QUERY */
+/* ------------->------------->------------>-------------->------------> */
+
+/* Hamburger Menu >>>>>>>>>>>>>>>>>>>>*/ 
+
+@media all and (min-width:300px) and (max-width:1100px) {
+    /* Layer 1 */
+
+
+    /* Hamburger Menu */
+    #ham-menu{
+        background-color:  rgb(44, 75, 255);
+        height: 100vh;
+        width: 100%;
+        padding: 10px 30px;
+        position: absolute;
+        top: 0;
+        z-index: 10000;
+    }
+    #ham-menu > #layer1{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        /* border: 2px solid green; */
+    }
+    #ham-menu > #layer1 > #logo{
+        width: 30%;
+        /* border: 2px solid red; */
+    }
+    #ham-menu > #layer1 > #logo > svg{
+        width: 125px;
+    }
+    #ham-menu > #layer1 > #cut{
+        width: 30%;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: right;
+    }
+    #ham-menu > #layer1 > #cut >img{
+        width: 30px;
+        /* border: 2px solid green; */
+    }
+
+    /*  Layer 2 */
+
+    #ham-menu > #layer2{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        /* border: 2px solid green; */
+    }
+    #ham-menu > #layer2 > ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 2px solid green; */
+    }
+    #ham-menu > #layer2 > ul > li{
+        list-style: none;
+        margin-bottom: 20px;
+    }
+    #ham-menu > #layer2 > ul > li > a{
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 21px;
+        color: white;
+    }
+    #ham-btn{
+        background-color: rgb(233, 114, 132);
+    }
+    #tool2{
+        display: none;
+    }
+    #tool2 > li{
+        list-style: none;
+    }
+    #tool2 > li:first-child > a{
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 21px;
+        color: white;
+    }
+    #tool2 > div {
+        border-bottom: 2px solid white;
+    }
+    #tool2 > div > li {
+        list-style: none;
+        margin-bottom: 15px;
+    }
+    #tool2 > div > li > a{
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: white;
+    }
+    
+}
+
+/* Navbar >>>>>>>>>>>>>>>>>>>>*/ 
+
+@media all and (min-width:598px) and (max-width:1100px) {
+    #navbar{
+        padding: 25px 30px;
+    }
+    #navbar > #nav-mid {
+        display: none;
+    }
+    #navbar > #nav-right > #ham{
+        display: block;
+        width: 35px;
+    }
+    #navbar > #nav-right > #ham > img{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+
+@media all and (min-width:320px) and (max-width:597px) {
+    #navbar{
+        padding: 20px 25px;
+    }
+    #navbar > #nav-mid {
+        display: none;
+    }
+    #navbar > #nav-left > a > img{
+        width: 90px;
+    }
+    #navbar > #nav-right > #ham{
+        display: block;
+        width: 35px;
+    }
+    #navbar > #nav-right > #ham > img{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    #navbar > #nav-right > a:first-child{
+        display: none;
+    }
+    .get-started-btn{
+        font-size: 13px;
+        height: 40px;
+        padding: 0px 15px;
+    }
+    .learn-more-btn{
+        font-size: 13px;
+        height: 40px;
+        padding: 0px 15px;
+    }
+
+
+}
